@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const beerRouter =  require('./routes/beerRouter');
+const breweryRouter =  require('./routes/breweryRouter');
 const mongoose = require('mongoose');
 //USES
 app.use(express.urlencoded({ extended: true }));
@@ -10,6 +11,7 @@ app.use(express.json());
 //////////////////////////////////////////
 
 app.use('/api/beers', beerRouter);
+app.use('/api/brewery', breweryRouter);
 
 
 
